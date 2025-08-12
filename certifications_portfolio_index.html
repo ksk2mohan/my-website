@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certifications — Your Name</title>
+  <meta name="description" content="Portfolio of online course certifications (MongoDB, IBM, Spoken Tutorial, Learnathon, etc.)" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#06b6d4; --muted:#9aa4b2; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071021);color:#e6eef6}
+    .site{max-width:var(--maxw);margin:36px auto;padding:24px}
+    header{display:flex;gap:18px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021;box-shadow:0 6px 18px rgba(6,182,212,0.12)}
+    h1{margin:0;font-size:1.45rem}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .controls{display:flex;gap:10px;align-items:center}
+    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021;border:none}
+
+    main{margin-top:28px}
+    .intro{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .intro .summary{flex:1;min-width:260px}
+    .stats{display:flex;gap:12px;margin-top:12px}
+    .stat{background:var(--card);padding:10px 12px;border-radius:10px;min-width:120px;text-align:center}
+    .stat b{display:block;font-size:1.1rem}
+
+    /* grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:8px}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:8px;background:#041227}
+    .card h3{margin:6px 0 0;font-size:1rem}
+    .meta{font-size:0.85rem;color:var(--muted)}
+    .card .actions{margin-top:auto;display:flex;gap:8px}
+    .pill{padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600;color:var(--muted);font-size:0.85rem}
+
+    footer{margin-top:34px;text-align:center;color:var(--muted)}
+
+    /* responsive tweaks */
+    @media (max-width:540px){.logo{width:46px;height:46px}}
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div>
+          <h1>Your Name</h1>
+          <p class="lead">Online Course Certifications — MongoDB, IBM, Spoken Tutorial, Learnathon and more</p>
+        </div>
+      </div>
+      <div class="controls">
+        <a class="btn" href="#download">Download CV</a>
+        <a class="btn primary" href="#certs">View Certificates</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="summary">
+          <p>Welcome! This page lists my verified course certifications and completion badges. Each certificate card links to the certificate image or its verification URL. To add or update certificates, place images in <code>/assets/certs/</code> and edit the HTML below.</p>
+          <div class="stats">
+            <div class="stat"><b id="count">6</b><span class="meta">Certifications</span></div>
+            <div class="stat"><b>4</b><span class="meta">Issuers</span></div>
+            <div class="stat"><b>2021–2025</b><span class="meta">Years</span></div>
+          </div>
+        </div>
+
+        <div style="min-width:240px">
+          <img src="assets/profile.jpg" alt="profile" style="width:100%;border-radius:12px;display:block;box-shadow:0 8px 30px rgba(2,6,23,0.6)">
+        </div>
+      </section>
+
+      <section id="certs">
+        <h2 style="margin-top:22px">Certificates</h2>
+        <p class="meta">Click any certificate to open the full image or verification page.</p>
+
+        <!--
+          HOW TO ADD CERTIFICATES
+          1. Put your certificate image file in assets/certs/, e.g. assets/certs/mongodb-cert.jpg
+          2. Duplicate a <article class="card"> block below and update title, issuer, date and href
+        -->
+
+        <div class="grid">
+          <!-- Sample card 1 -->
+          <article class="card">
+            <a href="assets/certs/mongodb-cert.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="assets/certs/mongodb-cert-thumb.jpg" alt="MongoDB Certificate">
+            </a>
+            <h3>MongoDB Basics — MongoDB University</h3>
+            <div class="meta">Issued: Jun 2023 • Credential ID: ABCD-1234</div>
+            <div class="actions">
+              <a class="btn" href="https://example.com/verification/mongodb" target="_blank" rel="noopener">Verify</a>
+              <span class="pill">Database</span>
+            </div>
+          </article>
+
+          <!-- Sample card 2 -->
+          <article class="card">
+            <a href="assets/certs/ibm-data-science.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="assets/certs/ibm-data-science-thumb.jpg" alt="IBM Data Science">
+            </a>
+            <h3>IBM Data Science Professional Certificate — IBM</h3>
+            <div class="meta">Issued: Dec 2022 • Credential ID: 9876-XY</div>
+            <div class="actions">
+              <a class="btn" href="https://www.your-verify-link.com" target="_blank" rel="noopener">Verify</a>
+              <span class="pill">Data Science</span>
+            </div>
+          </article>
+
+          <!-- Sample card 3 -->
+          <article class="card">
+            <a href="assets/certs/spoken-tutorial-c.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="assets/certs/spoken-tutorial-thumb.jpg" alt="Spoken Tutorial Cert">
+            </a>
+            <h3>Introduction to LaTeX — Spoken Tutorial</h3>
+            <div class="meta">Issued: Mar 2021</div>
+            <div class="actions">
+              <a class="btn" href="assets/certs/spoken-tutorial-c.jpg" target="_blank">Open</a>
+              <span class="pill">Tools</span>
+            </div>
+          </article>
+
+          <!-- Sample card 4 -->
+          <article class="card">
+            <a href="assets/certs/learnathon-ml.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="assets/certs/learnathon-ml-thumb.jpg" alt="Learnathon ML Cert">
+            </a>
+            <h3>Machine Learning Bootcamp — Learnathon</h3>
+            <div class="meta">Issued: Aug 2024</div>
+            <div class="actions">
+              <a class="btn" href="#">Verify</a>
+              <span class="pill">ML</span>
+            </div>
+          </article>
+
+          <!-- Duplicate or add more cards here -->
+        </div>
+
+      </section>
+
+      <footer>
+        <p>Made with ❤️ • Update this page by editing <code>index.html</code> and committing to your GitHub repository.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
